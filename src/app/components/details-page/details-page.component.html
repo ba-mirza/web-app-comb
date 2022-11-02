@@ -1,0 +1,26 @@
+<ng-container *ngIf="detailsCh else loading">
+  <div class="wrapper">
+    <button (click)="backToHome()">Back to home</button>
+    <div class="card">
+      <img src="{{detailsCh.image}}" alt="{{detailsCh.name}}">
+      <h2 style="font-size: 24px">Name: {{detailsCh.name}}</h2>
+      <p>Status: {{detailsCh.status}}</p>
+    </div>
+    <ng-container *ngIf="episodes">
+      <div style="margin-top: 1rem" class="episode-wrapper">
+        <ng-container *ngFor="let eps of episodes">
+          <div class="episodes">
+            <h1>Title: {{eps.name}}</h1>
+            <p>Date: {{eps.air_date}}</p>
+            <span>Episode: {{eps.episode}}</span>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+
+
+<ng-template #loading>
+  <h1 class="loading">Loading...</h1>
+</ng-template>
