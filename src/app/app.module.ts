@@ -12,12 +12,14 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
 import {ScrollingModule} from "@angular/cdk/scrolling";
 import { DetailsPageComponent } from './components/details-page/details-page.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    DetailsPageComponent
+    DetailsPageComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
